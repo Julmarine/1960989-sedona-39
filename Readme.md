@@ -2,6 +2,7 @@
 
 - Студент: [Юлия Олькова](https://up.htmlacademy.ru/htmlcss/39/user/1960989).
 - Наставник: [Дарья Шестерина](https://htmlacademy.ru/profile/id221124).
+- Сайт: [Седона](https://julmarine.github.io/1960989-sedona-39/)
 
 ---
 

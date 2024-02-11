@@ -26,37 +26,45 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#"
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-search" href="#"
               ><span class="visually-hidden">Поиск</span></a
             >
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#"
+
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-link-like" href="#"
               ><span class="visually-hidden">Избранное</span>
-              <span class="likes-number">12</span>
+              <span class="navigation-user-likes-number">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+
+          <li class="navigation-user-item">
+            <a class="header-button" href="#">ХОЧУ СЮДА!</a>
           </li>
         </ul>
       </nav>
-      <!-- Шапка сайта -->
     </header>
+
     <main class="main-index">
-      <h1 class="visually-hidden">Седона - город в Аризоне</h1>
-      <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-      <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      <section class="hero">
+       <h1 class="visually-hidden">Седона - город в Аризоне</h1>
+       <img class="hero-img" src="#" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+       <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+       <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-wide">
+            <div class="advantages-first-last-card">
             <h3 class="advantages-title">Настоящий городок</h3>
             <p class="advantages-descriptoin">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
+          </div>
+            <img class="advantages-img" src="#" alt="Вид на городок Седона">
           </li>
           <li class="advantages-item">
             <h3 class="advantages-title">Небольшая площадь</h3>
@@ -76,18 +84,21 @@
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
-          <li class="advantages-item">
+
+          <li class="advantages-item advantages-item-wide">
+            <div class="advantages-first-last-card">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-descriptoin">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </p>
+          </div>
+          <img class="advantages-img" src="#" alt="Мост Дьявола - естественная арка в скалах из красного песчаника в Аризоне">
           </li>
         </ul>
       </section>
+      <section class="offers">
       <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
       <p>Опытный персонал и качественное обслуживание!</p>
-      <section class="offers">
-        <h2 class="visually-hidden">Наши рекомендации</h2>
         <ul>
           <li class="offers-item">
             <h3 class="offers-title">Жильё</h3>
@@ -110,12 +121,12 @@
         </ul>
       </section>
       <section class="search">
-        <h2>Заинтересовались?</h2>
-        <p>
+        <h2 class="search-title">Заинтересовались?</h2>
+        <p class="search-description">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a class="button button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <a class="button-search" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe">
         <h2>Подпишитесь на рассылку</h2>
@@ -123,32 +134,30 @@
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form
-          class="email-form"
+          class="subscribe-form"
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
           <input type="text" name="user-email" placeholder="Ваш e-mail" />
-          <button class="button" type="submit">Подписаться</button>
+          <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="button" href="https://vk.com/htmlacademy" target="_blank">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
-          <li class="footer-social-item">
-            <a class="button" href="https://t.me/htmlacademy" target="_blank">
+          <li class="social-item">
+            <a class="social-link" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
-          <li class="footer-social-item">
-            <a
-              class="button"
+          <li class="social-item">
+            <a class="social-link"
               href="https://www.youtube.com/user/htmlacademyru"
               target="_blank"
             >
@@ -156,17 +165,12 @@
             </a>
           </li>
         </ul>
-      </section>
-      <section class="phone-number">
-        <a class="link-phone-number" href="tel:+78128121212"
-          ><h2>+7 (812) 812-12-12</h2></a
-        >
-      </section>
 
-      <section class="logo">
-        <h2 class="visually-hidden">Логотип</h2>
-        <img class="footer-logo" src="#" alt="Логотип HTML Академии" />
-      </section>
+        <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a
+        >
+        <span class="visually-hidden">Логотип</span>
+        <img class="footer-logo" src="#" alt="Логотип HTML Академии"/>
+
     </footer>
   </body>
 </html>

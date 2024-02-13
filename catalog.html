@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Каталог</title>
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" alt="Логотип Седоны" src="index.html">
@@ -42,7 +42,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -54,7 +54,7 @@
           </li>
         </ul>
       </header>
-      <section class="section-hotels-filter">
+      <section class="section-hotels-filter" data-test="filter">
 <h2 class="visually-hidden">Поиск с фильтрами</h2>
 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
   <fieldset class="catalog-filter-group">
@@ -72,12 +72,14 @@
       Парковка
     </label>
   </li>
+
+  <li class="catalog-filter-item">
     <label class="control">
-      <li class="catalog-filter-item">
       <input class="control-input" type="checkbox" name="wi-fi">
       Wi-Fi
     </label>
   </li>
+</ul>
   </fieldset>
 
   <fieldset class="catalog-filter-group">
@@ -107,27 +109,21 @@
   </ul>
 </fieldset>
 
+<form class="form-catalog-price" action="https://echo.htmlacademy.ru" method="get">
 <fieldset class="catalog-price">
   <legend>Стоимость, ₽</legend>
-  <form class="form-catalog-price" action="https://echo.htmlacademy.ru" method="get">
     <label for="price-from">От</label>
-     <input type="text" name="price" id="price-from" value="0">
-
-
+    <input type="text" name="price" id="price-from" value="0">
     <label for="price-to">До</label>
     <input type="text" name="price" id="price-to" value="9000" >
-
-</legend>
 </fieldset>
-
 <button class="price-button active-price-button" type="submit">Применить</button>
 <button class="price-button" type="reset">Сбросить</button>
 </form>
-
-
-
       </section>
-      <section class="section-catalog">
+
+
+      <section class="section-catalog" data-test="catalog">
 <h2>Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка" id="select-control-list">
           <option value="popular">Сначала дешёвое</option>
@@ -137,10 +133,10 @@
         <a href="#" class="catalog-view catalog-view-selected">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a class="button" href="#" class="catalog-view">
+        <a class="button" href="#" class="catalog-view-one">
           <span class="visually-hidden">Показать по одному</span>
         </a>
-        <a class="button" href="#" class="catalog-view">
+        <a class="button" href="#" class="catalog-view-list">
           <span class="visually-hidden">Показать список</span>
         </a>
         <ul class="product-list">
@@ -150,7 +146,7 @@
             <h3 class="product-card-title">Amara Resort & Spa</h3>
           </a>
           <p>Гостиница</p>
-          <p class="product-card-price"></p>От 4000Р</p>
+          <p class="product-card-price">От 4000Р</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 4-stars">
@@ -165,7 +161,7 @@
             <h3 class="product-card-title">Villas at Poco Diablo</h3>
           </a>
           <p>Гостиница</p>
-          <p class="product-card-price"></p>От 5000Р</p>
+          <p class="product-card-price">От 5000Р</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 4-stars">
@@ -180,7 +176,7 @@
             <h3 class="product-card-title">Desert Quail Inn</h3>
           </a>
           <p>Гостиница</p>
-          <p class="product-card-price"></p>От 2500Р</p>
+          <p class="product-card-price">От 2500Р</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 3-stars">
@@ -195,7 +191,7 @@
             <h3 class="product-card-title">GreenTree Inn</h3>
           </a>
           <p>Гостиница</p>
-          <p class="product-card-price"></p>От 1500Р</p>
+          <p class="product-card-price">От 1500Р</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 2-stars">
@@ -227,18 +223,18 @@
         </ul>
 
       </section>
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="email-form" action="#" method="post">
-          <input type="text" name="email-address" placeholder="Ваш e-mail" />
+          <input type="text" name="email-address" placeholder="Ваш e-mail">
           <button class="button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="social-list">
         <li class="social-item">
@@ -264,7 +260,7 @@
       <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a
       >
       <span class="visually-hidden">Логотип</span>
-      <img class="footer-logo" src="#" alt="Логотип HTML Академии"/>
+      <img class="footer-logo" src="#" alt="Логотип HTML Академии">
 
   </footer>
   </body>

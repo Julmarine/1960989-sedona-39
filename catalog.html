@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <header class="main-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" alt="Логотип Седоны" src="images/header/logo-sedona.svg" width="138"
+          <img class="page-header-logo" alt="Логотип Седоны" src="images/logo-sedona-new.svg" width="138"
           height="64">
         </a>
         <ul class="navigation-list">
@@ -38,12 +39,13 @@
           </li>
 
           <li class="navigation-user-item">
-            <a class="header-button" href="#">ХОЧУ СЮДА!</a>
+            <a class="header-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-inner" data-test="main">
+      <div class="background-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -56,7 +58,7 @@
         </ul>
       </header>
       <section class="section-hotels-filter" data-test="filter">
-<h2 class="visually-hidden">Поиск с фильтрами</h2>
+<h2 class="visually-hidden filter-title">Поиск с фильтрами</h2>
 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
   <fieldset class="catalog-filter-group">
     <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -82,6 +84,7 @@
   </li>
 </ul>
   </fieldset>
+ </form>
 
   <fieldset class="catalog-filter-group">
   <legend class="catalog-filter-title">Тип жилья:</legend>
@@ -114,14 +117,15 @@
 <fieldset class="catalog-price">
   <legend>Стоимость, ₽</legend>
     <label for="price-from">От</label>
-    <input type="text" name="price" id="price-from" value="0">
+    <input class="input-price" type="text" name="price" id="price-from" value="0">
     <label for="price-to">До</label>
-    <input type="text" name="price" id="price-to" value="9000" >
+    <input class="input-price" type="text" name="price" id="price-to" value="9000" >
 </fieldset>
 <button class="price-button active-price-button" type="submit">Применить</button>
 <button class="price-button" type="reset">Сбросить</button>
 </form>
       </section>
+    </div>
 
 
       <section class="section-catalog" data-test="catalog">
@@ -134,10 +138,10 @@
         <a href="#" class="catalog-view catalog-view-selected">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a class="button" href="#" class="catalog-view-one">
+        <a href="#" class="catalog-view catalog-view-one">
           <span class="visually-hidden">Показать по одному</span>
         </a>
-        <a class="button" href="#" class="catalog-view-list">
+        <a href="#" class="catalog-view catalog-view-list">
           <span class="visually-hidden">Показать список</span>
         </a>
         <ul class="product-list">
@@ -147,8 +151,8 @@
             height="212" alt="Звездное небо в расщелине гор">
             <h3 class="product-card-title">Amara Resort & Spa</h3>
           </a>
-          <p>Гостиница</p>
-          <p class="product-card-price">От 4000Р</p>
+          <p class="product-card-subtitle">Гостиница</p>
+          <p class="product-card-price">От 4000₽</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 4-stars">
@@ -163,8 +167,8 @@
             height="212" alt="Вечерняя радуга">
             <h3 class="product-card-title">Villas at Poco Diablo</h3>
           </a>
-          <p>Гостиница</p>
-          <p class="product-card-price">От 5000Р</p>
+          <p class="product-card-subtitle">Гостиница</p>
+          <p class="product-card-price">От 5000₽</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 4-stars">
@@ -179,8 +183,8 @@
             height="212" alt="Скала на фоне летнего неба">
             <h3 class="product-card-title">Desert Quail Inn</h3>
           </a>
-          <p>Гостиница</p>
-          <p class="product-card-price">От 2500Р</p>
+          <p class="product-card-subtitle">Гостиница</p>
+          <p class="product-card-price">От 2500₽</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 3-stars">
@@ -195,8 +199,8 @@
             height="212" alt="Скала в звездной ночи">
             <h3 class="product-card-title">GreenTree Inn</h3>
           </a>
-          <p>Гостиница</p>
-          <p class="product-card-price">От 1500Р</p>
+          <p class="product-card-subtitle">Гостиница</p>
+          <p class="product-card-price">От 1500₽</p>
           <a class="more-button" href="#">ПОДРОБНЕЕ</a>
           <button class="favorite-card">В ИЗБРАННОЕ</button>
           <p class="stars 2-stars">
@@ -228,14 +232,19 @@
         </ul>
 
       </section>
-      <section class="subscribe" data-test="subscribe">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>
+      <section class="subscribe-inner" data-test="subscribe">
+        <h2 class="subscribe-inner-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-inner-subtitle">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
-        <form class="email-form" action="#" method="post">
-          <input type="text" name="email-address" placeholder="Ваш e-mail">
-          <button class="button" type="submit">Подписаться</button>
+        <form
+          class="subscribe-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <label class="visually-hidden" for="user-email">Введите ваш e-mail</label>
+          <input class="input-subscribe" type="text" name="user-email" placeholder="Ваш e-mail" id="user-email">
+          <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>

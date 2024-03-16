@@ -14,32 +14,71 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
 
 body {
-  font-family: "PT Sans", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
   font-style: normal;
   font-weight: 400;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  margin-left: 70px;
+  margin-right: 30px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 450px;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-user {
+  max-width: 308px;
+  margin-left: auto;
 }
 
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  text-align: center;
+  color: #000000;
   text-decoration: none;
   text-transform: capitalize;
 }
+
 
 .navigation-user-link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  text-align: center;
+  color: #000000;
+
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -54,6 +93,10 @@ body {
   color: #FFFFFF;
   background-color: #756157;
 
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .hero {
@@ -74,12 +117,9 @@ body {
 }
 
 .advantages-main-paragraph {
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #333333;
 }
 
 .advantages-title {
@@ -93,12 +133,9 @@ body {
 }
 
 .advantages-descriptoin {
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #333333;
 
 }
 
@@ -120,10 +157,17 @@ body {
 
 .advantages-list {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
+.advantages-item {
+  width: 230px;
+}
 
-.advantages-first-fifth-card {
+.advantages-card {
   background: #82B3D3;
 }
 
@@ -137,6 +181,14 @@ body {
 
 .offers-list {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.offers-item {
+  width: 230px;
 }
 
 .offers-title {
@@ -150,12 +202,9 @@ body {
 }
 
 .offers-description {
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #333333;
 }
 
 .offers-housing {
@@ -182,13 +231,9 @@ body {
 }
 
 .search-description {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #333333;
 }
 
 .button-search {
@@ -242,8 +287,6 @@ body {
 }
 
 .subscribe-subtitle {
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -266,11 +309,17 @@ body {
 }
 
 .breadcrumbs {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
+}
+
+.section-hotels-filter {
+  display: flex;
+}
+
+.section-catalog {
+  display: flex;
 }
 
 .filter-title {color: #FFFFFF;}
@@ -284,8 +333,6 @@ body {
 }
 
 .catalog-filter-item {
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
@@ -347,12 +394,9 @@ body {
 }
 
 .card-rating  {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #333333;
   background: #F2F2F2;
   border: none;
 }
@@ -424,5 +468,28 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #333333
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.social-list {
+  width: 142px;
+  margin-right: 42;
+}
+
+.footer-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-left: auto;
 }

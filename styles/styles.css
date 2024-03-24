@@ -37,6 +37,12 @@ body {
 
 }
 
+img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -141,7 +147,8 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding: 8px 26px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border: none;
   cursor: pointer;
   appearance: none;
@@ -170,17 +177,10 @@ body {
   background-color: rgb(180, 215, 243);
 }
 
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .welcome-img {
   padding: 51px 0 82px;
   vertical-align: middle;
 }
-
 
 .title-h2 {
   font-weight: 700;
@@ -198,10 +198,19 @@ img {
   color: #333333;
 }
 
+.header-section {
+  margin: 0 auto;
+  padding: 69px 0;
+}
 
-.advantages-title {}
+.advantages-title {
+  margin: 0;
+  margin-bottom: 25px;
+}
 
-.advantages-subtitle {}
+.advantages-subtitle {
+  margin: 0;
+}
 
 .advantages-item-wide h3 {
   color: #FFFFFF;
@@ -269,7 +278,8 @@ img {
 }
 
 .header-offers {
-  margin: 0;
+  margin: 0 auto;
+  padding: 64px 0;
 }
 
 .offers-list {
@@ -281,12 +291,12 @@ img {
 }
 
 .offers-title {
-  margin-top: 64px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
 .offers-subtitle {
-  margin-bottom: 64px;
+  margin: 0;
 }
 
 .offers-item-title {
@@ -340,8 +350,13 @@ img {
   background: rgba(131, 179, 211, 0.2);
 }
 
+.search {
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
 .search-title {
-  margin-top: 96px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -390,28 +405,22 @@ img {
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-button {
-  font-family: inherit;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 36px;
-  background: #82B3D3;
-  border-radius: 0 4px 4px 0;
-}
 
 .subscribe {
-  height: 415px;
+  margin: 0 auto;
+  padding: 96px 0 104px;
 
   outline: 5px solid orange;
   outline-offset: -5px;
 }
 
 .subscribe-title {
-  padding-top: 96px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
 .subscribe-subtitle {
+  margin: 0;
   margin-bottom: 54px;
 }
 
@@ -420,6 +429,15 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(180, 215, 243);
+}
+
+.subscribe-button {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 36px;
+  background: #82B3D3;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscribe-special {
@@ -482,12 +500,17 @@ img {
   color: #FFFFFF;
 }
 
-.catalog-filter-list {}
+.catalog-filter-group {}
+
+.catalog-filter-list {
+  list-style-type: none;
+}
 
 .catalog-filter-item {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
+
 }
 
 .checkbox {}
@@ -526,7 +549,7 @@ img {
 }
 
 .catalog {
-  padding: 50px 0 60px;
+  padding: 50px 70px 60px 70px;
 }
 
 .catalog-title {
@@ -577,9 +600,10 @@ img {
 
 .product-list {
   display: grid;
-  grid-template-columns: 340px 340px 340px;
-  column-gap: 20px;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
   list-style-type: none;
+  margin: 0;
   margin-top: 40px;
   padding: 0 0 40px;
   border-bottom: 1px solid #e6e6e6;
@@ -591,15 +615,20 @@ img {
 
 .product-card {
   display: grid;
-  padding: 20px;
   border: 1px solid #e6e6e6;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 212px 28px 21px 36px 37px;
+  gap: 16px 20px;
+  padding: 19px;
 }
 
 .product-card-link {
+  grid-column: 1 / 3;
   text-decoration: none;
 }
 
 .product-card-title {
+  margin: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -607,11 +636,29 @@ img {
   color: #000000;
 }
 
+.product-card-subtitle {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.product-card-price {
+  justify-self: right;
+}
+
 .card-rating {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
   background: #F2F2F2;
+  padding: 9px 22px 8px 23px;
   border: none;
 }
 
